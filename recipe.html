@@ -1,42 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>My Recipe</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<h3>Recipe List</h3>
+<body>
+
+<h1>My Recipe</h1>
+
+<h2>Recipe List</h2>
 <ul>
-  <li>Fried Rice/li>
+  <li>Fried Rice</li>
   <li>Fries</li>
   <li>Fish Steak</li>
-  </ul>
+</ul>
 
-<h3>Ingredients</h3>
+<h2>Ingredients</h2>
 <ul>
   <li>...</li>
   <li>...</li>
 </ul>
 
-<h3 class="rate">Rate This Recipe</h3>
+<h2 class="rate">Rate This Recipe</h2>
 <form>
   <fieldset style="width: 250px;">
     <legend>How difficult is this recipe?</legend>
+
     <label>
       <input type="radio" id="easy" name="difficulty" value="easy">
       Easy
     </label>
+
     <label>
       <input type="radio" id="med" name="difficulty" value="medium">
       Intermediate
     </label>
+
     <label>
       <input type="radio" id="hard" name="difficulty" value="hard">
       Hard
     </label>
+
   </fieldset>
 </form>
 
-<h3>Conversion</h3>
+<h2>Conversion</h2>
 <form>
   <label for="tblspn">Tablespoons:</label>
   <input type="number" id="tblspn" name="tblspn">
@@ -44,3 +54,13 @@
   <label for="cups">Cups:</label>
   <input type="number" id="cups" name="cups">
 </form>
+
+<!--
+<h2>Equipment</h2>
+<ul>
+  <li>...</li>
+</ul>
+-->
+
+</body>
+</html>
