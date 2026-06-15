@@ -1,100 +1,45 @@
 /* ------------------------------
-   GLOBAL RESET + BOX MODEL FIX
---------------------------------*/
-* {
-  box-sizing: border-box;
-}
-
-/* ------------------------------
-   GLOBAL PAGE STYLES
+   THE GLOBAL PAGE STYLES
 --------------------------------*/
 body {
   font-family: Arial, sans-serif;
-  background-color: #775ecf;
+  background-color: #fdf8f2;
   margin: 0;
   padding: 0;
-  line-height: 1;
+  line-height: 1.6;
 }
 
-/* Headings */
+/* Center all main headings */
 h1, h2 {
   color: #8b3a0e;
   text-align: center;
 }
 
 /* ------------------------------
-   CA5 LAYOUT STRUCTURE
+   FLEXBOX LAYOUT
 --------------------------------*/
-#container {
-  width: 95%;
-  max-width: 1200px;   /* <-- prevents layout collapse */
-  margin: auto;
-}
-
-/* ROWS */
-.row {
+.wrapper {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: nowrap;      /* <-- prevents stacking */
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-/* FULL-WIDTH CELLS (HEADER + FOOTER) */
-.full {
-  width: 100%;
   padding: 20px;
-  background: #f3e5d0;
-  /* border: double cornflowerblue; */
+  gap: 20px;
 }
 
-/* COLUMNS */
-.col {
-  padding: 5px;
-  background: #fff;
-  /*border: double cornflowerblue;*/
-  flex: 0 0 auto;         /* <-- allows width to work */
-  margin: 0;          /* <-- reduced so columns fit */
-  min-width: 160px;       /* <-- prevents shrinking */
-}
+/* Each box inside a wrapper */
+.wrapper div {
+  flex: 1;
+  padding: 20px;
 
-/* ------------------------------
-   ROW 2 COLUMN WIDTHS
---------------------------------*/
-#links { width: 32%; }
-#picture { width: 32%; }
-#rating { width: 32%; }
-
-/* ------------------------------
-   ROW 3 COLUMN WIDTHS
---------------------------------*/
-#ingredients,
-#equipment,
-#directions {
-  width: 32%;            
-}
-
-/* ------------------------------
-   IMAGE + CAPTION
---------------------------------*/
-.recipe-img {
-  width: 100%;
-  border-radius: 6px;
-}
-
-.caption {
-  font-size: 0.9rem;
-  color: #555;
-  margin-top: 8px;
+  /* TURN THIS ON WHILE BUILDING. TURN OFF AFTER */
+ /* NOTE: I am choosing to not turn this off. Using it as a design element. */
+  border: double cornflowerblue;
 }
 
 /* ------------------------------
    RATE THIS RECIPE
 --------------------------------*/
-.rate, #rating h2 {
+.rate {
   color: #b22222;
-  text-align: left;
+  text-align: center;
 }
 
 fieldset {
@@ -118,26 +63,23 @@ input[type="number"] {
 }
 
 /* ------------------------------
-   LIST STYLING
+   INGREDIENTS + DIRECTIONS
 --------------------------------*/
 ul {
   list-style-type: square;
   margin-left: 20px;
-  line-height: 1.8;
 }
 
 ol {
-  margin-left: 5px;
+  margin-left: 20px;
 }
 
 /* ------------------------------
    FOOTER
 --------------------------------*/
-#footer {
+footer {
   text-align: center;
   padding: 20px;
   color: #444;
   font-size: 0.9em;
-  background: #f3e5d0;
-  /*border: double cornflowerblue;*/
 }
